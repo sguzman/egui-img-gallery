@@ -1,6 +1,7 @@
 use log::{info, debug, error};
 use iced::widget::{Column, Text};
 use iced::Element;
+use iced::Settings;
 
 pub fn setup_logging() {
     env_logger::init();
