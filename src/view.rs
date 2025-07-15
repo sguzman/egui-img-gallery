@@ -1,4 +1,4 @@
-use iced::{Column, Image, Row, Text};
+use iced::widget::{Column, Image, Row, Text};
 
 pub fn create_image_viewer() -> Column {
     // Create layout for displaying images
