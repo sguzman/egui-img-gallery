@@ -1,226 +1,179 @@
+# 📸 Picture Gallery App
 
-# 📸 Picture Gallery App - Using ~~egui~~ **Iced** in Rust 🦀
+Built with **Iced 0.13.1** & Rust Nightly 1.89 🦀
 
-Welcome to the **Picture Gallery App** built with **Rust** and **Iced**! 🎨 This app allows you to view, shuffle, and create custom collages with images from your collection. Explore the power of declarative UI, smooth animations, and customizable features with a **native Rust** GUI application. 🚀
-
----
-
-## 🚀 Features
-
-### 1. **Image Viewer** 🌄
-
-- Display your images in a beautiful, responsive viewer.
-- Customize layout and transitions.
-
-### 2. **Image Shuffle** 🔄
-
-- Shuffle images in a random order and enjoy a seamless slideshow.
-- Customizable shuffle speed and settings.
-
-### 3. **Collage Creator** 🖼️
-
-- Create stunning collages from multiple images.
-- Choose from different grid sizes (e.g., 3x3, 4x4, etc.).
-- Adjustable padding and resizing options for the grid.
-
-### 4. **Smooth Animations** 💫
-
-- Smooth sliding menus, fading transitions, and custom animation effects.
-- Eye-catching visual effects for menus and images.
-
-### 5. **Folder Monitoring** 📁
-
-- Automatically detect and load new images added to your folder in real time (optional).
-- Refresh images whenever a new file is added.
+Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is built using **Rust** and **Iced 0.13.1**. Seamlessly shuffle images, tile them in customizable grids, and control their refresh rates—creating stunning dynamic galleries effortlessly. 🚀
 
 ---
 
-## 🛠️ Getting Started
+## 🚀 Current Features
 
-### Requirements
+### 🌄 **Dynamic Image Viewer**
 
-- **Rust** (Nightly 1.89)
-- **Iced** (latest release)
-- **Notify** (for folder monitoring)
-- **Image** (for image manipulation)
-- **wgpu** or **glium** (optional for GPU-based effects like shaders)
+* [ ] Display images responsively.
+* [ ] Customize layout and grid dimensions (3x3, 4x4, etc.).
 
-### Installation Steps
+### 🔄 **Image Shuffle**
 
-1. **Clone the repository** 🖥️:
+* [ ] Shuffle images randomly in real-time.
+* [ ] Customizable shuffle intervals and speeds.
 
-   ```bash
-   git clone https://github.com/yourusername/picture-gallery-app.git
-   cd picture-gallery-app
+### 🖼️ **Grid Collages**
 
+* [ ] Adjustable grid sizes and resolutions.
+* [ ] Automatic image resizing and padding.
 
-2. **Install Rust** (Nightly 1.89):
+### 🎞️ **Smooth Animations**
 
-   ```bash
-   rustup install nightly-1.89
-   rustup default nightly-1.89
-   ```
+* [ ] Smooth UI transitions and visual effects.
 
-3. **Add Dependencies** 📦:
-   Modify the `Cargo.toml` file with the following dependencies:
+### 📁 **Folder Monitoring (Optional)**
 
-   ```toml
-   [dependencies]
-   iced = "0.3"  # Latest Iced release
-   notify = "5.0"
-   image = "0.24"
-   wgpu = "0.12"  # For GPU-based effects (optional)
-   ```
-
-4. **Build and Run** 🚀:
-
-   ```bash
-   cargo build
-   cargo run
-   ```
+* [ ] Auto-refresh gallery on image folder updates.
 
 ---
 
-## 🖼️ App Layout & Modules
+## 🛠️ Quick Start
 
-### 1. **Model** 🧠
+### 📌 **Requirements**
 
-- Holds the application's state (image list, shuffled state, current image, etc.).
-- Responsible for logic like shuffling images and managing collage grids.
+* Rust **Nightly 1.89**
+* Iced **0.13.1**
+* Notify **5.0** (optional folder monitoring)
+* Image **0.24** (image manipulation)
+* wgpu **0.12** (optional GPU effects)
 
-### 2. **View** 👀
+### 🔧 **Installation**
 
-- Renders the UI using Iced’s widgets.
-- Displays images, buttons, and handles layout (grids, image viewers, etc.).
-- Implements smooth animations and effects.
+Clone the repository:
 
-### 3. **Events** ⚡
+```bash
+git clone https://github.com/yourusername/picture-gallery-app.git
+cd picture-gallery-app
+```
 
-- Handles user interactions like button clicks (e.g., shuffle, change grid size).
-- Updates the UI state based on user inputs.
+Setup Rust:
 
-### 4. **Image Handling** 🖼️
+```bash
+rustup install nightly-1.89
+rustup default nightly-1.89
+```
 
-- Manages loading and resizing images using the `image` crate.
-- Optimizes image memory usage for smoother performance.
+Add dependencies to `Cargo.toml`:
 
-### 5. **Animations** 🎞️
+```toml
+[dependencies]
+iced = "0.13.1"
+notify = "5.0"
+image = "0.24"
+wgpu = "0.12" # optional
+```
 
-- Implements smooth transitions and custom animations for the gallery and menus.
-- Utilizes **Iced**'s `animated` widget for smooth UI effects.
+Run your app:
 
-### 6. **Folder Monitoring** 📂
-
-- Monitors folders for changes (optional).
-- Automatically refreshes images whenever a new file is added.
-
----
-
-## 🎨 Customization
-
-You can easily customize the app to suit your needs!
-
-### Image Layout
-
-- Change the grid size of collages (3x3, 4x4, etc.).
-- Set custom padding between images in the grid.
-
-### Shuffle Settings
-
-- Control the shuffle speed and randomness.
-- Adjust how often images are shuffled in the slideshow mode.
-
-### Animations
-
-- Add your own custom animations, like fading, sliding, or even advanced GPU-powered shaders for effects like ripples and glowing outlines (via **wgpu** or **glium**).
-- Smooth transitions between images for a seamless experience.
+```bash
+cargo build
+cargo run
+```
 
 ---
 
-## 🖥️ Running the App
+## 📑 **Concise Roadmap**
 
-### Slideshow Mode 🎞️
+### 🚩 **Phase 1: Setup & Basics**
 
-- Press the "Shuffle" button 🔄 to start the slideshow.
-- Automatically cycle through images with smooth transitions.
+* [ ] Project setup and dependencies
+* [ ] Basic UI with single image display
+* [ ] Grid layout and multiple image rendering
 
-### Collage Mode 🖼️
+### 🚩 **Phase 2: Dynamic Adjustments**
 
-- Choose a grid size (e.g., 3x3) and watch your images come together in beautiful collages.
-- Adjust padding and resizing as needed.
+* [ ] Image resizing based on grid dimensions
+* [ ] Dynamic grid resizing
+* [ ] Image refresh rates
+
+### 🚩 **Phase 3: Shuffle & Refresh**
+
+* [ ] Randomized shuffle functionality
+* [ ] Independent image refresh mechanism
+
+### 🚩 **Phase 4: UI & Styling**
+
+* [ ] Enhance UI (padding, margins, themes)
+* [ ] Customizable grid cell sizes
+
+### 🚩 **Phase 5: Testing & Debugging**
+
+* [ ] Unit tests for core functionalities
+* [ ] UI responsiveness and debugging
 
 ---
 
-## 🔧 Advanced Customization (Optional)
+## 🌟 **Future Enhancements**
 
-If you want to take things a step further, you can experiment with **GPU-powered effects** like:
+These are exciting features planned beyond the current roadmap:
 
-- **Ripples** 🌊: Add interactive water ripple effects on images.
-- **Outline Shining** ✨: Create glowing outlines around selected images for a stunning visual effect.
-- **Real-time Filters** 🎨: Apply custom shaders to your images in real time for unique artistic effects.
-
-To enable GPU-based effects, you can integrate **wgpu** or **glium** for high-performance rendering. Check the **wgpu** documentation for how to add custom shaders to your project.
-
----
-
-## 🌍 Cross-Platform
-
-This app is **cross-platform**, so you can run it on **Windows**, **Linux**, and **macOS**! 🌏 You can even extend it to the **Web** using **Iced**'s web support, giving you the flexibility to deploy across various environments. 🌐
+* 🚧 **Custom non-grid tiling**: Flexible and drag-and-drop layouts.
+* 🚧 **Per-image refresh rates**: Individual refresh rates configuration.
+* 🚧 **Cross-platform & Web Support**: Expand support to Windows, macOS, and Web via Tauri.
+* 🚧 **Tag/Vibe Filtered Shuffle**: Shuffle images by tags or perceived mood.
 
 ---
 
-## 🤝 Contributing
+## 🎨 **Customization & Advanced Options**
 
-We welcome contributions! If you'd like to contribute, feel free to fork the repository and make a pull request. Please follow these steps:
+* Custom padding and grid resolution.
+* Advanced GPU effects (ripples, glow) via `wgpu` or `glium`.
+* Extendable animation system.
+
+---
+
+## 🌐 **Platform**
+
+* Currently supports **Linux**.
+* Future support for **Windows**, **macOS**, and **Web** planned.
+
+---
+
+## 🤝 **Contributing**
+
+We welcome community involvement! To contribute:
 
 1. Fork the repository.
 2. Create your feature branch (`git checkout -b feature-name`).
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-name`).
-5. Create a new pull request.
+5. Submit a pull request.
 
 ---
 
-## 📝 License
+## 📜 **License**
 
-This project is licensed under the Creative Commons License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👨‍💻 Support & Feedback
-
-If you have any questions or run into any issues, feel free to open an issue on GitHub! 🚀
+This project is licensed under the Creative Commons License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🏆 Acknowledgements
+## 💬 **Support & Feedback**
 
-- **Iced**: A beautiful Rust library for building desktop applications.
-- **Rust**: The programming language that makes this app fast and safe!
-- **wgpu**/**glium**: For adding advanced GPU effects (optional).
-- **Notify**: For folder monitoring and dynamic image updates.
+Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 
 ---
 
-## 🧑‍💻 **Project Showcase** ✨
+## 🎖️ **Acknowledgements**
 
-Here’s a preview of what your app might look like:
-
-![Screenshot of Picture Gallery App](path_to_screenshot)
-
----
-
-### 🎉 Enjoy building your **Picture Gallery App** with **Rust** and **Iced**! 🎉
-
-```
+* **Iced 0.13.1** - Modern, declarative GUI for Rust.
+* **Rust Nightly 1.89** - Reliable nightly Rust build.
+* **Notify 5.0 & Image 0.24** - Essential supporting crates.
+* **wgpu 0.12** - GPU-based enhancements.
 
 ---
 
-### Highlights:
-- **Emojis** are used throughout the README to make it visually engaging and fun! 🎉
-- The structure is detailed and informative, covering all the main features of the project.
-- **Cross-platform support** is emphasized, and customization options are clearly laid out.
-- **Advanced customization** (GPU effects like ripples and glowing outlines) is mentioned for flexibility in the future.
+## 🚧 **Progress Tracking**
 
-Let me know if you'd like me to adjust anything or add more sections to this!
-```
+* ✅ All roadmap tasks clearly marked.
+* 📅 Track your feature completion at a glance!
+
+---
+
+🎉 **Enjoy building your beautiful, dynamic Picture Gallery with Rust & Iced!** 🎉
+
