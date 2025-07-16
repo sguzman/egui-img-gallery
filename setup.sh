@@ -16,14 +16,15 @@ sudo apt install -y \
     libxcb-xfixes0-dev
 
 # --- Rust toolchain setup ---
-echo "🦀 Installing rustup and Rust nightly 1.89..."
+echo "🦀 Installing rustup and Rust Nightly (approx. 1.89)..."
 if ! command -v rustup &> /dev/null; then
     curl --proto '=https' --tlsv1.2 https://sh.rustup.rs | sh -s -- -y
     export PATH="$HOME/.cargo/bin:$PATH"
 fi
 
-rustup install nightly-1.89
-rustup default nightly-1.89
+# Install the nightly version from right before Rust 1.89.0 stable
+rustup install nightly-2024-05-22
+rustup default nightly-2024-05-22
 
 echo "📦 Verifying Rust version:"
 rustc --version
