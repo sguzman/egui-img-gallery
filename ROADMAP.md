@@ -10,28 +10,28 @@ This phase will cover the basic foundation of the app, ensuring that the app com
 
 ### **1.1 Project Setup and Dependencies**
 
-* [ ] **Install necessary dependencies**:
+* [x] **Install necessary dependencies**:
 
   * `Iced` (UI framework)
   * `log` (for logging and debugging)
   * `image` (for image manipulation)
-* [ ] **Set up a new Rust project**.
-* [ ] **Implement logging setup** using `env_logger`.
+* [x] **Set up a new Rust project**.
+* [x] **Implement logging setup** using `env_logger`.
 
 ### **1.2 Displaying Images**
 
-* [ ] **Create a basic UI**:
+* [x] **Create a basic UI**:
 
   * Display a single image.
   * Integrate **Iced** to render the image in a basic window.
-* [ ] **Test the rendering** to ensure the image is correctly displayed.
-* [ ] **Handle image loading** from the filesystem.
+* [x] **Test the rendering** to ensure the image is correctly displayed.
+* [x] **Handle image loading** from the filesystem.
 
 ### **1.3 Tiling Images in a Grid**
 
-* [ ] **Create a grid layout** using **Iced** (use a `Row` and `Column` or `Grid` container).
-* [ ] **Allow for dynamic grid dimensions** (e.g., 3x3, 4x4).
-* [ ] **Render multiple images** in the grid based on the given dimensions.
+* [x] **Create a grid layout** using **Iced** (use a `Row` and `Column` or `Grid` container).
+* [x] **Allow for dynamic grid dimensions** (e.g., 3x3, 4x4).
+* [x] **Render multiple images** in the grid based on the given dimensions.
 
 ---
 
@@ -141,4 +141,9 @@ By following this roadmap, you'll be able to track progress effectively and focu
 
 * ✅ All tasks and subgoals are clearly marked with checkboxes to indicate completion.
 * 📅 This roadmap helps define when each feature is completed, so stakeholders can easily track progress.
+
+## 📝 AI Activity Log
+
+- **2025-07-19** Implemented grid layout for multiple images.
+- **2025-07-19** Added .gitignore rules to exclude binary images.
 

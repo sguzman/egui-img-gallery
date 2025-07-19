@@ -1,2 +1,9 @@
 /target
 .aider*
+# Ignore binary assets
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp

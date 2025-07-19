@@ -10,8 +10,8 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 
 ### 🌄 **Dynamic Image Viewer**
 
-* [ ] Display images responsively.
-* [ ] Customize layout and grid dimensions (3x3, 4x4, etc.).
+* [x] Display images responsively.
+* [x] Customize layout and grid dimensions (3x3, 4x4, etc.).
 
 ### 🔄 **Image Shuffle**
 
@@ -82,9 +82,9 @@ cargo run
 
 ### 🚩 **Phase 1: Setup & Basics**
 
-* [ ] Project setup and dependencies
-* [ ] Basic UI with single image display
-* [ ] Grid layout and multiple image rendering
+* [x] Project setup and dependencies
+* [x] Basic UI with single image display
+* [x] Grid layout and multiple image rendering
 
 ### 🚩 **Phase 2: Dynamic Adjustments**
 
@@ -172,6 +172,14 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 
 * ✅ All roadmap tasks clearly marked.
 * 📅 Track your feature completion at a glance!
+
+---
+
+## 📝 AI Activity Log
+
+- **2025-07-17** Implemented basic image display and logging setup.
+- **2025-07-19** Implemented grid layout for multiple images.
+- **2025-07-19** Added .gitignore rules to exclude binary images.
 
 ---
 
