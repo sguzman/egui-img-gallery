@@ -1,19 +1,16 @@
-use iced::widget::{Column, Image, Row, Text};
+use iced::widget::{Column, Image, Row};
+use iced::Length;
 
-pub fn create_image_viewer() -> Column {
-    // Create layout for displaying images
-    Column::new()
-        .push(Image::new("path_to_image"))
-        .push(Text::new("Image Slideshow"))
-    // Add more UI components
-}
-
-pub fn create_collage_viewer(grid: Vec<String>, grid_size: usize) -> Column {
-    // Create grid layout for collage
-    let mut rows = Vec::new();
-    for _ in 0..grid_size {
-        let row = Row::new();
-        rows.push(row);
+pub fn create_collage_viewer<Message: Clone + 'static>(grid: &[String], grid_size: usize) -> Column<'static, Message> {
+    let mut column = Column::new();
+    for row_index in 0..grid_size {
+        let mut row = Row::new();
+        for col_index in 0..grid_size {
+            if let Some(path) = grid.get(row_index * grid_size + col_index) {
+                row = row.push(Image::new(path).width(Length::Fill).height(Length::Fill));
+            }
+        }
+        column = column.push(row);
     }
-    Column::new().push(rows)
+    column
 }
