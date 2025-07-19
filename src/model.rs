@@ -9,6 +9,7 @@ pub struct Model {
     pub images: Vec<String>,
     pub collage_grid: Vec<String>,
     pub grid_size: usize,
+    pub cell_size: u16,
     pub refresh_rate: Duration,
     current_indices: Vec<usize>,
     next_refresh: Vec<Instant>,
@@ -27,6 +28,7 @@ impl Model {
             images,
             collage_grid: Vec::new(),
             grid_size,
+            cell_size: 150,
             refresh_rate: Duration::from_secs(5),
             current_indices: Vec::new(),
             next_refresh: Vec::new(),
@@ -84,5 +86,15 @@ impl Model {
 
     pub fn force_refresh(&mut self) {
         self.create_collage(self.grid_size);
+    }
+
+    pub fn increase_cell_size(&mut self) {
+        self.cell_size += 10;
+    }
+
+    pub fn decrease_cell_size(&mut self) {
+        if self.cell_size > 20 {
+            self.cell_size -= 10;
+        }
     }
 }
