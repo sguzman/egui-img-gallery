@@ -24,7 +24,7 @@
           libGL
           libdrm
           libxkbcommon
-          llvmPackages_19.lib
+          llvmPackages_19.llvm
           mesa
           pkg-config
           vulkan-loader
