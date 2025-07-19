@@ -12,6 +12,7 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 
 * [x] Display images responsively.
 * [x] Customize layout and grid dimensions (3x3, 4x4, etc.).
+* [x] Adjustable cell sizes and theme toggle.
 
 ### 🔄 **Image Shuffle**
 
@@ -99,8 +100,8 @@ cargo run
 
 ### 🚩 **Phase 4: UI & Styling**
 
-* [ ] Enhance UI (padding, margins, themes)
-* [ ] Customizable grid cell sizes
+* [x] Enhance UI (padding, margins, themes)
+* [x] Customizable grid cell sizes
 
 ### 🚩 **Phase 5: Testing & Debugging**
 
@@ -182,3 +183,4 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 - **2025-07-19** Added .gitignore rules to exclude binary images.
 - **2025-07-19** Added dynamic grid controls and image refresh timer.
 - **2025-07-19** Implemented shuffle and refresh buttons with independent image refresh.
+- **2025-07-19** Added themed UI with customizable cell sizes.

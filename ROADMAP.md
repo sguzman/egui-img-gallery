@@ -79,13 +79,13 @@ This phase will improve the user interface, add visual polish, and make the app 
 
 ### **4.1 Styling and UI Enhancements**
 
-* [ ] **Add padding, borders, and margins** to improve image placement and overall layout.
-* [ ] **Make the app visually appealing** by adding themes and simple animations (like smooth image transitions).
+* [x] **Add padding, borders, and margins** to improve image placement and overall layout.
+* [x] **Make the app visually appealing** by adding themes and simple animations (like smooth image transitions).
 
 ### **4.2 Customizable Grid Options**
 
-* [ ] **Allow users to customize grid cell size** (cell width, cell height).
-* [ ] **Let users choose between different grid layouts** (e.g., 3x3, 4x4, or custom grid sizes).
+* [x] **Allow users to customize grid cell size** (cell width, cell height).
+* [x] **Let users choose between different grid layouts** (e.g., 3x3, 4x4, or custom grid sizes).
 
 ---
 
@@ -149,4 +149,5 @@ By following this roadmap, you'll be able to track progress effectively and focu
 - **2025-07-19** Added .gitignore rules to exclude binary images.
 - **2025-07-19** Completed Phase 2 dynamic grid and refresh logic.
 - **2025-07-19** Implemented shuffle and refresh controls for Phase 3.
+- **2025-07-19** Completed Phase 4 UI customization and theming.
 
