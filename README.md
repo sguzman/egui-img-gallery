@@ -181,8 +181,3 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 - **2025-07-19** Implemented grid layout for multiple images.
 - **2025-07-19** Added .gitignore rules to exclude binary images.
 - **2025-07-19** Added dynamic grid controls and image refresh timer.
-
----
-
-🎉 **Enjoy building your beautiful, dynamic Picture Gallery with Rust & Iced!** 🎉
-
