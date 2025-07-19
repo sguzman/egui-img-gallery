@@ -15,6 +15,7 @@ This phase will cover the basic foundation of the app, ensuring that the app com
   * `Iced` (UI framework)
   * `log` (for logging and debugging)
   * `image` (for image manipulation)
+  * `X11` libraries for Linux display support
 * [x] **Set up a new Rust project**.
 * [x] **Implement logging setup** using `env_logger`.
 
@@ -150,4 +151,5 @@ By following this roadmap, you'll be able to track progress effectively and focu
 - **2025-07-19** Completed Phase 2 dynamic grid and refresh logic.
 - **2025-07-19** Implemented shuffle and refresh controls for Phase 3.
 - **2025-07-19** Completed Phase 4 UI customization and theming.
+- **2025-07-19** Enabled X11 backend configuration for Linux.
 
