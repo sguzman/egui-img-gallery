@@ -16,18 +16,23 @@
         };
 
         buildInputs = with pkgs; [
+          egl-wayland
           expat
           fontconfig
           freetype
           freetype.dev
           libGL
+          libxkbcommon
+          mesa
           pkg-config
+          vulkan-loader
+          vulkan-tools
+          vulkan-validation-layers
+          wayland
           xorg.libX11
           xorg.libXcursor
           xorg.libXi
           xorg.libXrandr
-          wayland
-          libxkbcommon
         ];
       in {
         devShells.default = pkgs.mkShell {
