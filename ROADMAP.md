@@ -10,28 +10,28 @@ This phase will cover the basic foundation of the app, ensuring that the app com
 
 ### **1.1 Project Setup and Dependencies**
 
-* [ ] **Install necessary dependencies**:
+* [x] **Install necessary dependencies**:
 
   * `Iced` (UI framework)
   * `log` (for logging and debugging)
   * `image` (for image manipulation)
-* [ ] **Set up a new Rust project**.
-* [ ] **Implement logging setup** using `env_logger`.
+* [x] **Set up a new Rust project**.
+* [x] **Implement logging setup** using `env_logger`.
 
 ### **1.2 Displaying Images**
 
-* [ ] **Create a basic UI**:
+* [x] **Create a basic UI**:
 
   * Display a single image.
   * Integrate **Iced** to render the image in a basic window.
-* [ ] **Test the rendering** to ensure the image is correctly displayed.
-* [ ] **Handle image loading** from the filesystem.
+* [x] **Test the rendering** to ensure the image is correctly displayed.
+* [x] **Handle image loading** from the filesystem.
 
 ### **1.3 Tiling Images in a Grid**
 
-* [ ] **Create a grid layout** using **Iced** (use a `Row` and `Column` or `Grid` container).
-* [ ] **Allow for dynamic grid dimensions** (e.g., 3x3, 4x4).
-* [ ] **Render multiple images** in the grid based on the given dimensions.
+* [x] **Create a grid layout** using **Iced** (use a `Row` and `Column` or `Grid` container).
+* [x] **Allow for dynamic grid dimensions** (e.g., 3x3, 4x4).
+* [x] **Render multiple images** in the grid based on the given dimensions.
 
 ---
 
@@ -41,18 +41,18 @@ In this phase, we'll focus on allowing users to adjust the grid, add functionali
 
 ### **2.1 Image Resizing and Tiling**
 
-* [ ] **Add ability to resize individual images** based on grid size.
-* [ ] **Apply a resize function** to each image to fit within its grid cell.
+* [x] **Add ability to resize individual images** based on grid size.
+* [x] **Apply a resize function** to each image to fit within its grid cell.
 
 ### **2.2 Dynamic Grid Resizing**
 
-* [ ] **Allow users to change the grid size dynamically** (e.g., from 3x3 to 4x4 or 5x5).
-* [ ] **Re-render the images** appropriately when grid size changes.
+* [x] **Allow users to change the grid size dynamically** (e.g., from 3x3 to 4x4 or 5x5).
+* [x] **Re-render the images** appropriately when grid size changes.
 
 ### **2.3 Implement Image Refresh Rate**
 
-* [ ] **Set a fixed refresh rate for each image** (e.g., 1-second, 2-second refresh).
-* [ ] **Ensure images update** at their individual refresh rates.
+* [x] **Set a fixed refresh rate for each image** (e.g., 1-second, 2-second refresh).
+* [x] **Ensure images update** at their individual refresh rates.
 
 ---
 
@@ -141,4 +141,10 @@ By following this roadmap, you'll be able to track progress effectively and focu
 
 * ✅ All tasks and subgoals are clearly marked with checkboxes to indicate completion.
 * 📅 This roadmap helps define when each feature is completed, so stakeholders can easily track progress.
+
+## 📝 AI Activity Log
+
+- **2025-07-19** Implemented grid layout for multiple images.
+- **2025-07-19** Added .gitignore rules to exclude binary images.
+- **2025-07-19** Completed Phase 2 dynamic grid and refresh logic.
 

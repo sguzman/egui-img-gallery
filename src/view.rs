@@ -1,19 +1,30 @@
-use iced::widget::{Column, Image, Row, Text};
+use iced::widget::{Button, Column, Image, Row, Text};
+use iced::Length;
 
-pub fn create_image_viewer() -> Column {
-    // Create layout for displaying images
-    Column::new()
-        .push(Image::new("path_to_image"))
-        .push(Text::new("Image Slideshow"))
-    // Add more UI components
-}
+pub fn create_collage_viewer<Message: Clone + 'static>(
+    grid: &[String],
+    grid_size: usize,
+    inc_msg: Message,
+    dec_msg: Message,
+) -> Column<'static, Message> {
+    let mut column = Column::new().spacing(10);
 
-pub fn create_collage_viewer(grid: Vec<String>, grid_size: usize) -> Column {
-    // Create grid layout for collage
-    let mut rows = Vec::new();
-    for _ in 0..grid_size {
-        let row = Row::new();
-        rows.push(row);
+    let controls = Row::new()
+        .spacing(5)
+        .push(Button::new(Text::new("-"))
+            .on_press(dec_msg))
+        .push(Button::new(Text::new("+"))
+            .on_press(inc_msg));
+
+    column = column.push(controls);
+    for row_index in 0..grid_size {
+        let mut row = Row::new().spacing(5);
+        for col_index in 0..grid_size {
+            if let Some(path) = grid.get(row_index * grid_size + col_index) {
+                row = row.push(Image::new(path).width(Length::Fill).height(Length::Fill));
+            }
+        }
+        column = column.push(row);
     }
-    Column::new().push(rows)
+    column
 }

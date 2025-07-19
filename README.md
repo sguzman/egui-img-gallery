@@ -10,8 +10,8 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 
 ### 🌄 **Dynamic Image Viewer**
 
-* [ ] Display images responsively.
-* [ ] Customize layout and grid dimensions (3x3, 4x4, etc.).
+* [x] Display images responsively.
+* [x] Customize layout and grid dimensions (3x3, 4x4, etc.).
 
 ### 🔄 **Image Shuffle**
 
@@ -20,8 +20,8 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 
 ### 🖼️ **Grid Collages**
 
-* [ ] Adjustable grid sizes and resolutions.
-* [ ] Automatic image resizing and padding.
+* [x] Adjustable grid sizes and resolutions.
+* [x] Automatic image resizing and padding.
 
 ### 🎞️ **Smooth Animations**
 
@@ -82,15 +82,15 @@ cargo run
 
 ### 🚩 **Phase 1: Setup & Basics**
 
-* [ ] Project setup and dependencies
-* [ ] Basic UI with single image display
-* [ ] Grid layout and multiple image rendering
+* [x] Project setup and dependencies
+* [x] Basic UI with single image display
+* [x] Grid layout and multiple image rendering
 
 ### 🚩 **Phase 2: Dynamic Adjustments**
 
-* [ ] Image resizing based on grid dimensions
-* [ ] Dynamic grid resizing
-* [ ] Image refresh rates
+* [x] Image resizing based on grid dimensions
+* [x] Dynamic grid resizing
+* [x] Image refresh rates
 
 ### 🚩 **Phase 3: Shuffle & Refresh**
 
@@ -175,5 +175,9 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 
 ---
 
-🎉 **Enjoy building your beautiful, dynamic Picture Gallery with Rust & Iced!** 🎉
+## 📝 AI Activity Log
 
+- **2025-07-17** Implemented basic image display and logging setup.
+- **2025-07-19** Implemented grid layout for multiple images.
+- **2025-07-19** Added .gitignore rules to exclude binary images.
+- **2025-07-19** Added dynamic grid controls and image refresh timer.
