@@ -63,12 +63,13 @@ The third phase focuses on shuffling the images in the grid and ensuring that ea
 ### **3.1 Implement Shuffle Function**
 
 * [ ] **Shuffle the images** in the grid randomly when triggered.
-* [ ] **Add shuffle button** to trigger the image shuffling.
+* [x] **Shuffle the images** in the grid randomly when triggered.
+* [x] **Add shuffle button** to trigger the image shuffling.
 
 ### **3.2 Implement Refresh Mechanism**
 
-* [ ] **Add refresh button** to refresh the grid (reload images).
-* [ ] **Make sure images refresh independently at their set rates**.
+* [x] **Add refresh button** to refresh the grid (reload images).
+* [x] **Make sure images refresh independently at their set rates**.
 
 ---
 
@@ -147,4 +148,5 @@ By following this roadmap, you'll be able to track progress effectively and focu
 - **2025-07-19** Implemented grid layout for multiple images.
 - **2025-07-19** Added .gitignore rules to exclude binary images.
 - **2025-07-19** Completed Phase 2 dynamic grid and refresh logic.
+- **2025-07-19** Implemented shuffle and refresh controls for Phase 3.
 

@@ -1119,6 +1119,7 @@ dependencies = [
  "image 0.25.6",
  "log",
  "notify",
+ "rand",
  "serde",
  "tokio",
  "wgpu 26.0.1",
