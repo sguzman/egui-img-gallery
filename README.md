@@ -15,7 +15,7 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 
 ### 🔄 **Image Shuffle**
 
-* [ ] Shuffle images randomly in real-time.
+* [x] Shuffle images randomly in real-time.
 * [ ] Customizable shuffle intervals and speeds.
 
 ### 🖼️ **Grid Collages**
@@ -94,8 +94,8 @@ cargo run
 
 ### 🚩 **Phase 3: Shuffle & Refresh**
 
-* [ ] Randomized shuffle functionality
-* [ ] Independent image refresh mechanism
+* [x] Randomized shuffle functionality
+* [x] Independent image refresh mechanism
 
 ### 🚩 **Phase 4: UI & Styling**
 
@@ -181,3 +181,4 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 - **2025-07-19** Implemented grid layout for multiple images.
 - **2025-07-19** Added .gitignore rules to exclude binary images.
 - **2025-07-19** Added dynamic grid controls and image refresh timer.
+- **2025-07-19** Implemented shuffle and refresh buttons with independent image refresh.
