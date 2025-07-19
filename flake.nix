@@ -57,7 +57,6 @@
         shaderc
         spirv-tools
         spirv-cross
-        vma
       ];
 
       #
