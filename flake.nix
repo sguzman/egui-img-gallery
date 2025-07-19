@@ -22,7 +22,9 @@
           freetype
           freetype.dev
           libGL
+          libdrm
           libxkbcommon
+          llvmPackages_19.lib
           mesa
           pkg-config
           vulkan-loader
