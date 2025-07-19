@@ -20,8 +20,8 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 
 ### 🖼️ **Grid Collages**
 
-* [ ] Adjustable grid sizes and resolutions.
-* [ ] Automatic image resizing and padding.
+* [x] Adjustable grid sizes and resolutions.
+* [x] Automatic image resizing and padding.
 
 ### 🎞️ **Smooth Animations**
 
@@ -88,9 +88,9 @@ cargo run
 
 ### 🚩 **Phase 2: Dynamic Adjustments**
 
-* [ ] Image resizing based on grid dimensions
-* [ ] Dynamic grid resizing
-* [ ] Image refresh rates
+* [x] Image resizing based on grid dimensions
+* [x] Dynamic grid resizing
+* [x] Image refresh rates
 
 ### 🚩 **Phase 3: Shuffle & Refresh**
 
@@ -180,6 +180,7 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 - **2025-07-17** Implemented basic image display and logging setup.
 - **2025-07-19** Implemented grid layout for multiple images.
 - **2025-07-19** Added .gitignore rules to exclude binary images.
+- **2025-07-19** Added dynamic grid controls and image refresh timer.
 
 ---
 

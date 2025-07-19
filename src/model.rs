@@ -1,9 +1,10 @@
-use std::fs;
+use std::{fs, time::Duration};
 
 pub struct Model {
     pub images: Vec<String>,
     pub collage_grid: Vec<String>,
     pub grid_size: usize,
+    pub refresh_rate: Duration,
 }
 
 impl Model {
@@ -19,6 +20,7 @@ impl Model {
             images,
             collage_grid: Vec::new(),
             grid_size,
+            refresh_rate: Duration::from_secs(5),
         };
         model.create_collage(grid_size);
         model
@@ -34,5 +36,14 @@ impl Model {
         self.collage_grid = (0..needed)
             .filter_map(|_| iter.next().cloned())
             .collect();
+    }
+
+    pub fn update_grid_size(&mut self, new_size: usize) {
+        self.grid_size = new_size;
+        self.create_collage(new_size);
+    }
+
+    pub fn refresh(&mut self) {
+        self.create_collage(self.grid_size);
     }
 }

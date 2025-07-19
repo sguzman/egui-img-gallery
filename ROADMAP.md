@@ -41,18 +41,18 @@ In this phase, we'll focus on allowing users to adjust the grid, add functionali
 
 ### **2.1 Image Resizing and Tiling**
 
-* [ ] **Add ability to resize individual images** based on grid size.
-* [ ] **Apply a resize function** to each image to fit within its grid cell.
+* [x] **Add ability to resize individual images** based on grid size.
+* [x] **Apply a resize function** to each image to fit within its grid cell.
 
 ### **2.2 Dynamic Grid Resizing**
 
-* [ ] **Allow users to change the grid size dynamically** (e.g., from 3x3 to 4x4 or 5x5).
-* [ ] **Re-render the images** appropriately when grid size changes.
+* [x] **Allow users to change the grid size dynamically** (e.g., from 3x3 to 4x4 or 5x5).
+* [x] **Re-render the images** appropriately when grid size changes.
 
 ### **2.3 Implement Image Refresh Rate**
 
-* [ ] **Set a fixed refresh rate for each image** (e.g., 1-second, 2-second refresh).
-* [ ] **Ensure images update** at their individual refresh rates.
+* [x] **Set a fixed refresh rate for each image** (e.g., 1-second, 2-second refresh).
+* [x] **Ensure images update** at their individual refresh rates.
 
 ---
 
@@ -146,4 +146,5 @@ By following this roadmap, you'll be able to track progress effectively and focu
 
 - **2025-07-19** Implemented grid layout for multiple images.
 - **2025-07-19** Added .gitignore rules to exclude binary images.
+- **2025-07-19** Completed Phase 2 dynamic grid and refresh logic.
 
