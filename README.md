@@ -43,6 +43,7 @@ Welcome to the **Picture Gallery App**! 🎨 This vibrant and responsive app is 
 * Notify **5.0** (optional folder monitoring)
 * Image **0.24** (image manipulation)
 * wgpu **0.12** (optional GPU effects)
+* X11 libraries (**Linux only**) to support the display backend
 
 ### 🔧 **Installation**
 
@@ -74,7 +75,7 @@ Run your app:
 
 ```bash
 cargo build
-cargo run
+WINIT_UNIX_BACKEND=x11 cargo run
 ```
 
 ---
@@ -131,7 +132,7 @@ These are exciting features planned beyond the current roadmap:
 
 ## 🌐 **Platform**
 
-* Currently supports **Linux**.
+* Currently supports **Linux** using the **X11** backend.
 * Future support for **Windows**, **macOS**, and **Web** planned.
 
 ---
@@ -184,3 +185,4 @@ Encounter an issue or have suggestions? Open an issue on GitHub! 🚀
 - **2025-07-19** Added dynamic grid controls and image refresh timer.
 - **2025-07-19** Implemented shuffle and refresh buttons with independent image refresh.
 - **2025-07-19** Added themed UI with customizable cell sizes.
+- **2025-07-19** Configured X11 backend on Linux and updated docs.

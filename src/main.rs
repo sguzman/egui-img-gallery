@@ -86,6 +86,10 @@ fn view(state: &State) -> Element<Message> {
 
 fn main() -> iced::Result {
     env_logger::Builder::from_env(Env::default().default_filter_or("info")).init();
+    #[cfg(target_os = "linux")]
+    unsafe {
+        std::env::set_var("WINIT_UNIX_BACKEND", "x11");
+    }
     info!("Launching Iced Gallery App");
     application("Iced Gallery App", update, view)
         .theme(|state: &State| state.theme.clone())
