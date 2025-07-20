@@ -35,6 +35,16 @@
         mesa
         pkg-config
         wayland
+        libx11
+        libxext
+        libxrandr
+        libxrender
+        libxcb
+        libxfixes
+      ];
+
+      # 1.5 xorg packages
+      xorgPkgs = with pkgs.xorg; [
         xorg.libX11
         xorg.libXcursor
         xorg.libXi
@@ -59,6 +69,7 @@
 
       buildInputs =
         userBasePkgs
+        ++ xorgPkgs
         ++ vulkanPkgs
         ++ debugPkgs
         ++ [pkgs.pkg-config];
@@ -69,9 +80,7 @@
 
       vkICDs = mkvPath "share/vulkan/icd.d" buildInputs;
       vkLayers = mkvPath "share/vulkan/explicit_layer.d" buildInputs;
-      llvmpipeJSON =
-  "${pkgs.mesa.drivers}/share/vulkan/icd.d/lvp_icd.x86_64.json";
-
+      llvmpipeJSON = "${pkgs.mesa.drivers}/share/vulkan/icd.d/lvp_icd.x86_64.json";
     in {
       #
       # ---- Dev shell -----------------------------------------------------
