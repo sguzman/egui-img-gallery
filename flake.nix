@@ -58,7 +58,7 @@
             # -------- Detect WSL2 vs native Linux ---------------------------
             if grep -qi microsoft /proc/version; then
               # Helper libs for Mesa‑dzn inside WSLg
-              export LD_LIBRARY_PATH=/usr/lib/wsl/lib\${LD_LIBRARY_PATH:+:\$LD_LIBRARY_PATH}
+              export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH}
               echo "🪟  WSL2 detected – using host GPU via D3D12/Zink"
             else
               # Native Linux: point the loader directly at our ICD JSONs
@@ -66,7 +66,7 @@
             fi
 
             # Validation / portability layers (works everywhere)
-            export VK_LAYER_PATH="${vkLayers}\${VK_LAYER_PATH:+:\$VK_LAYER_PATH}"
+            export VK_LAYER_PATH="${vkLayers}''${VK_LAYER_PATH:+:}$VK_LAYER_PATH}"
 
             echo "✅  Vulkan shell ready – try:  vkcube-wayland  |  vulkaninfo | head"
           '';
