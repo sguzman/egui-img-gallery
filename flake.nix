@@ -52,7 +52,6 @@
         shaderc
         spirv-tools
         spirv-cross
-        vma
       ];
 
       # 3. Optional debuggers
