@@ -80,22 +80,33 @@
         # shell = "${pkgs.fish}/bin/fish";
 
         shellHook = ''
-          # -------- Detect WSL2 vs native Linux ---------------------------
+          # -------- Detect WSL2 vs native Linux -----------------------------------
           if grep -qi microsoft /proc/version; then
-            # Helper libs for Mesa‑dzn inside WSLg
-            export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH}
-            echo "🪟  WSL2 detected – using host GPU via D3D12/Zink"
+            # (1) Helper libs for the d3d12/zink driver
+            export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH
+
+            # (2) Point the loader at *only* the d3d12 ICD JSON
+            d3d12_json="$(ls /usr/share/vulkan/icd.d/*d3d12*.json 2>/dev/null)"
+            if [ -n "$d3d12_json" ]; then
+              export VK_ICD_FILENAMES="$d3d12_json"
+              echo "🪟  WSL2 – using ICD: $d3d12_json"
+            else
+              echo "⚠️  WSL2 detected but d3d12 ICD JSON not found; Vulkan may fail"
+            fi
           else
-            # Native Linux: point the loader directly at our ICD JSONs
+            # Native Linux: point the loader directly at our Nix‑built ICDs
             export VK_ICD_FILENAMES="${vkICDs}"
           fi
 
           # Validation / portability layers (works everywhere)
-          export VK_LAYER_PATH="${vkLayers}''${VK_LAYER_PATH:+:}$VK_LAYER_PATH}"
+          export VK_LAYER_PATH="${vkLayers}''${VK_LAYER_PATH:+:}$VK_LAYER_PATH"
 
-          echo "✅  Vulkan shell ready – try:  vkcube-wayland  |  vulkaninfo | head"
+          # Optional: force X11 for winit/iced if Wayland keeps failing
+          export WINIT_UNIX_BACKEND=x11
+          export DISPLAY=${DISPLAY:-:0}
+
+          echo "✅  Vulkan shell ready – try:  vkcube-wayland | vulkaninfo | head"
         '';
-      };
 
       #
       # ---- Package build (Rust example) ---------------------------------
