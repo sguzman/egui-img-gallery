@@ -104,6 +104,7 @@
             vulkan-loader
             mesa
             libGL
+            libxkbcommon
             xorg.libX11
             xorg.libXi
             xorg.libXcursor
