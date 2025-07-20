@@ -24,6 +24,8 @@
       # 1. Packages you already had
       userBasePkgs = with pkgs; [
         expat
+        glib
+        dbus
         fontconfig
         freetype
         freetype.dev
@@ -88,12 +90,24 @@
         # shell = "${pkgs.fish}/bin/fish";
 
         shellHook = ''
+          echo "🚀 egui-img-gallery dev shell ready"
+
+          # Let wgpu use Vulkan by default
+          export WGPU_BACKEND=vulkan
           export WINIT_UNIX_BACKEND=x11
           export XDG_SESSION_TYPE=x11
           unset WAYLAND_DISPLAY
 
           # -------- Detect WSL2 vs native Linux -----------------------------------
           if grep -qi microsoft /proc/version; then
+            export LD_LIBRARY_PATH=${nixpkgs.lib.makeLibraryPath [
+              nixpkgs.vulkan-loader
+              nixpkgs.mesa
+              nixpkgs.libGL
+              nixpkgs.xorg.libX11
+              nixpkgs.xorg.libXcursor
+              nixpkgs.xorg.libXrandr
+            ]}:$LD_LIBRARY_PATH
             export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH
             export VK_ICD_FILENAMES="${llvmpipeJSON}"
             echo "🪟  WSL2 – using Nix‑supplied llvmpipe ICD (${llvmpipeJSON})"
