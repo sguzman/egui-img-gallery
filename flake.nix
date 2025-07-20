@@ -103,7 +103,7 @@
 
           # Optional: force X11 for winit/iced if Wayland keeps failing
           export WINIT_UNIX_BACKEND=x11
-          export DISPLAY=${DISPLAY:-:0}
+          export DISPLAY=''${DISPLAY:-:0}
 
           echo "✅  Vulkan shell ready – try:  vkcube-wayland | vulkaninfo | head"
         '';
