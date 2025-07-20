@@ -90,6 +90,9 @@
         # shell = "${pkgs.fish}/bin/fish";
 
         shellHook = ''
+          export WINIT_UNIX_BACKEND=x11
+          export XDG_SESSION_TYPE=x11
+
           # -------- Detect WSL2 vs native Linux -----------------------------------
           if grep -qi microsoft /proc/version; then
             export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH
@@ -104,7 +107,6 @@
           export VK_LAYER_PATH="${vkLayers}''${VK_LAYER_PATH:+:}$VK_LAYER_PATH"
 
           # Optional: force X11 for winit/iced if Wayland keeps failing
-          export WINIT_UNIX_BACKEND=x11
           export DISPLAY=''${DISPLAY:-:0}
 
           echo "✅  Vulkan shell ready – try:  vkcube-wayland | vulkaninfo | head"
