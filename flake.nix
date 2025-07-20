@@ -23,7 +23,6 @@
 
       # 1. Packages you already had
       userBasePkgs = with pkgs; [
-        egl-wayland
         expat
         fontconfig
         freetype
@@ -34,7 +33,6 @@
         libllvm
         mesa
         pkg-config
-        wayland
       ];
 
       # 1.5 xorg packages
@@ -92,6 +90,7 @@
         shellHook = ''
           export WINIT_UNIX_BACKEND=x11
           export XDG_SESSION_TYPE=x11
+          unset WAYLAND_DISPLAY
 
           # -------- Detect WSL2 vs native Linux -----------------------------------
           if grep -qi microsoft /proc/version; then
