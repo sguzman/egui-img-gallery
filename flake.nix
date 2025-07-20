@@ -35,20 +35,19 @@
         mesa
         pkg-config
         wayland
-        libx11
-        libxext
-        libxrandr
-        libxrender
         libxcb
-        libxfixes
       ];
 
       # 1.5 xorg packages
       xorgPkgs = with pkgs.xorg; [
-        xorg.libX11
-        xorg.libXcursor
-        xorg.libXi
-        xorg.libXrandr
+        libX11
+        libXcursor
+        libXi
+        libXrandr
+        libXext
+        xcbutil
+        libXrender
+        libXfixes
       ];
 
       # 2. Vulkan tool‑chain (vkcube sits in vulkan-tools)
