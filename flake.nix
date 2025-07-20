@@ -66,7 +66,7 @@
             fi
 
             # Validation / portability layers (works everywhere)
-            export VK_LAYER_PATH="${vkLayers}${VK_LAYER_PATH:+:\$VK_LAYER_PATH}"
+            export VK_LAYER_PATH="${vkLayers}\${VK_LAYER_PATH:+:\$VK_LAYER_PATH}"
 
             echo "✅  Vulkan shell ready – try:  vkcube-wayland  |  vulkaninfo | head"
           '';
