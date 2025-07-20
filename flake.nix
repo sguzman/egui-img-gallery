@@ -107,6 +107,7 @@
 
           echo "✅  Vulkan shell ready – try:  vkcube-wayland | vulkaninfo | head"
         '';
+      };
 
       #
       # ---- Package build (Rust example) ---------------------------------
