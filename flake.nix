@@ -101,12 +101,13 @@
           # -------- Detect WSL2 vs native Linux -----------------------------------
           if grep -qi microsoft /proc/version; then
             export LD_LIBRARY_PATH=${nixpkgs.lib.makeLibraryPath (with pkgs; [
-              pkgs.vulkan-loader
-              pkgs.mesa
-              pkgs.libGL
-              pkgs.xorg.libX11
-              pkgs.xorg.libXcursor
-              pkgs.xorg.libXrandr
+              vulkan-loader
+              mesa
+              libGL
+              xorg.libX11
+              xorg.libXi
+              xorg.libXcursor
+              xorg.libXrandr
             ])}:$LD_LIBRARY_PATH
             export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH
             export VK_ICD_FILENAMES="${llvmpipeJSON}"
