@@ -35,7 +35,6 @@
         mesa
         pkg-config
         wayland
-        libxcb
       ];
 
       # 1.5 xorg packages
