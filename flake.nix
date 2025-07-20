@@ -69,6 +69,9 @@
 
       vkICDs = mkvPath "share/vulkan/icd.d" buildInputs;
       vkLayers = mkvPath "share/vulkan/explicit_layer.d" buildInputs;
+      llvmpipeJSON =
+  "${pkgs.mesa.drivers}/share/vulkan/icd.d/lvp_icd.x86_64.json";
+
     in {
       #
       # ---- Dev shell -----------------------------------------------------
@@ -82,17 +85,9 @@
         shellHook = ''
           # -------- Detect WSL2 vs native Linux -----------------------------------
           if grep -qi microsoft /proc/version; then
-            # (1) Helper libs for the d3d12/zink driver
             export LD_LIBRARY_PATH=/usr/lib/wsl/lib''${LD_LIBRARY_PATH:+:}$LD_LIBRARY_PATH
-
-            # (2) Point the loader at *only* the d3d12 ICD JSON
-            d3d12_json="$(ls /usr/share/vulkan/icd.d/*d3d12*.json 2>/dev/null)"
-            if [ -n "$d3d12_json" ]; then
-              export VK_ICD_FILENAMES="$d3d12_json"
-              echo "🪟  WSL2 – using ICD: $d3d12_json"
-            else
-              echo "⚠️  WSL2 detected but d3d12 ICD JSON not found; Vulkan may fail"
-            fi
+            export VK_ICD_FILENAMES="${llvmpipeJSON}"
+            echo "🪟  WSL2 – using Nix‑supplied llvmpipe ICD (${llvmpipeJSON})"
           else
             # Native Linux: point the loader directly at our Nix‑built ICDs
             export VK_ICD_FILENAMES="${vkICDs}"
